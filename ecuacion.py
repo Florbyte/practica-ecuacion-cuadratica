@@ -9,7 +9,8 @@ def resolver_ecuacion(a, b, c):
                 'No es una ecuacion valida: a y b no pueden ser ambos 0'
             )
         return {"tipo": "lineal", "soluciones": [-c / b]}
-    disc = b ** 2 - 4 * a * c
+    disc = b ** 2 + 4 * a * c # ERROR: + en vez de -
+
     if disc < 0:
         return {"tipo": "sin_solucion_real", "soluciones": []}
     if disc == 0:
